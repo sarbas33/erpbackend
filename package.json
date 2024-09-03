@@ -1,8 +1,19 @@
 {
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "vercel-build": "echo 'Build step for Vercel deployment'",
+    "start": "ts-node api/index.ts",
+    "dev": "nodemon --exec ts-node api/index.ts",
+    "build": "tsc",
+    "vercel-build": "tsc",
     "test": "echo 'Add your test command here'"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^16.18.106",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
   }
 }
